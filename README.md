@@ -22,13 +22,10 @@ This pipeline assumes you have the following already installed:
 ```bash
 conda create -n snakemake -c conda-forge -c bioconda snakemake
 conda activate snakemake
+conda install numpy
+conda install matplotlib
 ```
 
-Then install Python dependencies:
-
-```bash
-pip install -r requirements.txt
-```
 
 
 ## How to Run
@@ -59,7 +56,6 @@ k_values:        # number of draws per experiment
 .
 ├── Snakefile
 ├── config.yaml
-├── requirements.txt
 ├── README.md
 ├── scripts/
 │   ├── lln_sim.py    # samples k values from [1..n] and saves means
