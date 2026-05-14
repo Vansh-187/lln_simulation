@@ -9,7 +9,7 @@ The pipeline runs this experiment `repeats` times for each k value and plots the
 
 ## Example Output
 
-![Box plot](plots/1000.png)
+![Box plot](Example_1000.png)
 
 
 ## Requirements
@@ -57,11 +57,12 @@ k_values:        # number of draws per experiment
 ├── Snakefile
 ├── config.yaml
 ├── README.md
+├── Example_1000.png
 ├── scripts/
 │   ├── lln_sim.py    # samples k values from [1..n] and saves means
 │   └── plot.py       # reads txt files and generates boxplot
 ├── results/
-│   └── n/            # one txt file per k value (currently shown only one for reference)
+│   └── n/            # one txt file per k value 
 └── plots/
-    └── n.png         # final boxplot
+    └── n.png         # final boxplot (will be shown once run, can be seen in the example_n.png. If I provide it in plots dir, snakemake will not run pipeline as result already exist)
 ```
