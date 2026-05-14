@@ -61,7 +61,7 @@ k_values:        # number of draws per experiment
 │   ├── lln_sim.py    # samples k values from [1..n] and saves means
 │   └── plot.py       # reads txt files and generates boxplot
 ├── results/
-│   └── n/            # one txt file per k value
+│   └── n/            # one txt file per k value (currently shown only one for reference)
 └── plots/
     └── n.png         # final boxplot
 ```
