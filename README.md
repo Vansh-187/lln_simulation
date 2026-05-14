@@ -41,7 +41,7 @@ To change `n`, `k_values`, or `repeats`, edit `config.yaml` before running:
 
 ```yaml
 n: 1000          # upper bound of range (1 to n), default 1000
-repeats: 10     # number of repeated experiments per k, default 10
+repeats: 10      # number of repeated experiments per k, default 10
 k_values:        # number of draws per experiment
   - 5
   - 10
