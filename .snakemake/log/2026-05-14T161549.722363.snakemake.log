@@ -1,0 +1,51 @@
+Assuming unrestricted shared filesystem usage.
+host: Vansh
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job        count
+-------  -------
+lln_sim        1
+plot           1
+all            1
+total          3
+
+Select jobs to execute...
+Execute 1 jobs...
+[Thu May 14 16:15:50 2026]
+localrule lln_sim:
+    input: scripts/lln_sim.py
+    output: results/1000/2000.txt
+    jobid: 9
+    reason: Missing output files: results/1000/2000.txt; Params have changed since last execution: Union of exclusive params before and now across all output: before: 100 now: 10 
+    wildcards: k=2000
+    resources: tmpdir=/tmp
+[Thu May 14 16:15:51 2026]
+Finished jobid: 9 (Rule: lln_sim)
+1 of 3 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Thu May 14 16:15:51 2026]
+localrule plot:
+    input: results/1000/5.txt, results/1000/10.txt, results/1000/25.txt, results/1000/50.txt, results/1000/100.txt, results/1000/200.txt, results/1000/1000.txt, results/1000/2000.txt
+    output: plots/1000.png
+    jobid: 1
+    reason: Missing output files: plots/1000.png; Input files updated by another job: results/1000/2000.txt
+    resources: tmpdir=/tmp
+[Thu May 14 16:15:53 2026]
+Finished jobid: 1 (Rule: plot)
+2 of 3 steps (67%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Thu May 14 16:15:53 2026]
+localrule all:
+    input: plots/1000.png
+    jobid: 0
+    reason: Input files updated by another job: plots/1000.png
+    resources: tmpdir=/tmp
+[Thu May 14 16:15:53 2026]
+Finished jobid: 0 (Rule: all)
+3 of 3 steps (100%) done
+Complete log(s): /mnt/c/Users/VANSH/OneDrive - iitr.ac.in/Acads/semester_6/BET-105/lln_simulation/.snakemake/log/2026-05-14T161549.722363.snakemake.log

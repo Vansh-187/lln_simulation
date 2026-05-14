@@ -1,0 +1,108 @@
+Assuming unrestricted shared filesystem usage.
+host: Vansh
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job        count
+-------  -------
+lln_sim        7
+all            1
+total          8
+
+Select jobs to execute...
+Execute 4 jobs...
+[Thu May 14 00:25:47 2026]
+localrule lln_sim:
+    input: scripts/lln_sim.py
+    output: results/1000/k5.txt
+    jobid: 1
+    reason: Missing output files: results/1000/k5.txt; Code has changed since last execution
+    wildcards: k=5
+    resources: tmpdir=/tmp
+[Thu May 14 00:25:47 2026]
+localrule lln_sim:
+    input: scripts/lln_sim.py
+    output: results/1000/k25.txt
+    jobid: 3
+    reason: Missing output files: results/1000/k25.txt; Code has changed since last execution
+    wildcards: k=25
+    resources: tmpdir=/tmp
+[Thu May 14 00:25:47 2026]
+localrule lln_sim:
+    input: scripts/lln_sim.py
+    output: results/1000/k100.txt
+    jobid: 5
+    reason: Missing output files: results/1000/k100.txt; Code has changed since last execution
+    wildcards: k=100
+    resources: tmpdir=/tmp
+[Thu May 14 00:25:47 2026]
+localrule lln_sim:
+    input: scripts/lln_sim.py
+    output: results/1000/k1000.txt
+    jobid: 7
+    reason: Missing output files: results/1000/k1000.txt; Code has changed since last execution
+    wildcards: k=1000
+    resources: tmpdir=/tmp
+[Thu May 14 00:25:47 2026]
+Finished jobid: 1 (Rule: lln_sim)
+1 of 8 steps (12%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Thu May 14 00:25:47 2026]
+localrule lln_sim:
+    input: scripts/lln_sim.py
+    output: results/1000/k200.txt
+    jobid: 6
+    reason: Missing output files: results/1000/k200.txt
+    wildcards: k=200
+    resources: tmpdir=/tmp
+[Thu May 14 00:25:47 2026]
+Finished jobid: 3 (Rule: lln_sim)
+2 of 8 steps (25%) done
+[Thu May 14 00:25:47 2026]
+Finished jobid: 5 (Rule: lln_sim)
+3 of 8 steps (38%) done
+[Thu May 14 00:25:48 2026]
+Finished jobid: 7 (Rule: lln_sim)
+4 of 8 steps (50%) done
+Select jobs to execute...
+Execute 2 jobs...
+[Thu May 14 00:25:48 2026]
+localrule lln_sim:
+    input: scripts/lln_sim.py
+    output: results/1000/k10.txt
+    jobid: 2
+    reason: Missing output files: results/1000/k10.txt
+    wildcards: k=10
+    resources: tmpdir=/tmp
+[Thu May 14 00:25:48 2026]
+localrule lln_sim:
+    input: scripts/lln_sim.py
+    output: results/1000/k50.txt
+    jobid: 4
+    reason: Missing output files: results/1000/k50.txt
+    wildcards: k=50
+    resources: tmpdir=/tmp
+[Thu May 14 00:25:48 2026]
+Finished jobid: 6 (Rule: lln_sim)
+5 of 8 steps (62%) done
+[Thu May 14 00:25:48 2026]
+Finished jobid: 2 (Rule: lln_sim)
+6 of 8 steps (75%) done
+[Thu May 14 00:25:48 2026]
+Finished jobid: 4 (Rule: lln_sim)
+7 of 8 steps (88%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Thu May 14 00:25:48 2026]
+localrule all:
+    input: results/1000/k5.txt, results/1000/k10.txt, results/1000/k25.txt, results/1000/k50.txt, results/1000/k100.txt, results/1000/k200.txt, results/1000/k1000.txt
+    jobid: 0
+    reason: Input files updated by another job: results/1000/k50.txt, results/1000/k5.txt, results/1000/k25.txt, results/1000/k1000.txt, results/1000/k100.txt, results/1000/k10.txt, results/1000/k200.txt
+    resources: tmpdir=/tmp
+[Thu May 14 00:25:48 2026]
+Finished jobid: 0 (Rule: all)
+8 of 8 steps (100%) done
+Complete log(s): /mnt/c/Users/VANSH/OneDrive - iitr.ac.in/Acads/semester_6/BET-105/lln_simulation/.snakemake/log/2026-05-14T002547.059092.snakemake.log

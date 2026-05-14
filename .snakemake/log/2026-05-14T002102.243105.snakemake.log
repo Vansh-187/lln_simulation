@@ -1,0 +1,136 @@
+Assuming unrestricted shared filesystem usage.
+host: Vansh
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job        count
+-------  -------
+lln_sim        7
+all            1
+total          8
+
+Select jobs to execute...
+Execute 4 jobs...
+[Thu May 14 00:21:02 2026]
+localrule lln_sim:
+    input: scripts/lln_sim.py
+    output: results/1000/k5.txt
+    jobid: 1
+    reason: Missing output files: results/1000/k5.txt
+    wildcards: k=5
+    resources: tmpdir=/tmp
+[Thu May 14 00:21:02 2026]
+localrule lln_sim:
+    input: scripts/lln_sim.py
+    output: results/1000/k25.txt
+    jobid: 3
+    reason: Missing output files: results/1000/k25.txt
+    wildcards: k=25
+    resources: tmpdir=/tmp
+[Thu May 14 00:21:02 2026]
+localrule lln_sim:
+    input: scripts/lln_sim.py
+    output: results/1000/k100.txt
+    jobid: 5
+    reason: Missing output files: results/1000/k100.txt
+    wildcards: k=100
+    resources: tmpdir=/tmp
+[Thu May 14 00:21:02 2026]
+localrule lln_sim:
+    input: scripts/lln_sim.py
+    output: results/1000/k1000.txt
+    jobid: 7
+    reason: Missing output files: results/1000/k1000.txt
+    wildcards: k=1000
+    resources: tmpdir=/tmp
+RuleException:
+CalledProcessError in file "/mnt/c/Users/VANSH/OneDrive - iitr.ac.in/Acads/semester_6/BET-105/lln_simulation/Snakefile", line 15:
+Command 'set -euo pipefail;  python scripts/lln_sim.py --n 1000 --k 5 --repeats 100 --outfile results/1000/k5.txt' returned non-zero exit status 2.
+[Thu May 14 00:21:02 2026]
+Error in rule lln_sim:
+    message: None
+    jobid: 1
+    input: scripts/lln_sim.py
+    output: results/1000/k5.txt
+    shell:
+        python scripts/lln_sim.py --n 1000 --k 5 --repeats 100 --outfile results/1000/k5.txt
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/mnt/c/Users/VANSH/OneDrive - iitr.ac.in/Acads/semester_6/BET-105/lln_simulation/Snakefile", line 15:
+Command 'set -euo pipefail;  python scripts/lln_sim.py --n 1000 --k 25 --repeats 100 --outfile results/1000/k25.txt' returned non-zero exit status 2.
+[Thu May 14 00:21:02 2026]
+Error in rule lln_sim:
+    message: None
+    jobid: 3
+    input: scripts/lln_sim.py
+    output: results/1000/k25.txt
+    shell:
+        python scripts/lln_sim.py --n 1000 --k 25 --repeats 100 --outfile results/1000/k25.txt
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/mnt/c/Users/VANSH/OneDrive - iitr.ac.in/Acads/semester_6/BET-105/lln_simulation/Snakefile", line 15:
+Command 'set -euo pipefail;  python scripts/lln_sim.py --n 1000 --k 100 --repeats 100 --outfile results/1000/k100.txt' returned non-zero exit status 2.
+[Thu May 14 00:21:02 2026]
+Error in rule lln_sim:
+    message: None
+    jobid: 5
+    input: scripts/lln_sim.py
+    output: results/1000/k100.txt
+    shell:
+        python scripts/lln_sim.py --n 1000 --k 100 --repeats 100 --outfile results/1000/k100.txt
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/mnt/c/Users/VANSH/OneDrive - iitr.ac.in/Acads/semester_6/BET-105/lln_simulation/Snakefile", line 15:
+Command 'set -euo pipefail;  python scripts/lln_sim.py --n 1000 --k 1000 --repeats 100 --outfile results/1000/k1000.txt' returned non-zero exit status 2.
+[Thu May 14 00:21:02 2026]
+Error in rule lln_sim:
+    message: None
+    jobid: 7
+    input: scripts/lln_sim.py
+    output: results/1000/k1000.txt
+    shell:
+        python scripts/lln_sim.py --n 1000 --k 1000 --repeats 100 --outfile results/1000/k1000.txt
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Thu May 14 00:21:03 2026]
+Error in rule lln_sim:
+    message: None
+    jobid: 1
+    input: scripts/lln_sim.py
+    output: results/1000/k5.txt
+    shell:
+        python scripts/lln_sim.py --n 1000 --k 5 --repeats 100 --outfile results/1000/k5.txt
+        (command exited with non-zero exit code)
+[Thu May 14 00:21:03 2026]
+Error in rule lln_sim:
+    message: None
+    jobid: 3
+    input: scripts/lln_sim.py
+    output: results/1000/k25.txt
+    shell:
+        python scripts/lln_sim.py --n 1000 --k 25 --repeats 100 --outfile results/1000/k25.txt
+        (command exited with non-zero exit code)
+[Thu May 14 00:21:03 2026]
+Error in rule lln_sim:
+    message: None
+    jobid: 5
+    input: scripts/lln_sim.py
+    output: results/1000/k100.txt
+    shell:
+        python scripts/lln_sim.py --n 1000 --k 100 --repeats 100 --outfile results/1000/k100.txt
+        (command exited with non-zero exit code)
+[Thu May 14 00:21:03 2026]
+Error in rule lln_sim:
+    message: None
+    jobid: 7
+    input: scripts/lln_sim.py
+    output: results/1000/k1000.txt
+    shell:
+        python scripts/lln_sim.py --n 1000 --k 1000 --repeats 100 --outfile results/1000/k1000.txt
+        (command exited with non-zero exit code)
+Complete log(s): /mnt/c/Users/VANSH/OneDrive - iitr.ac.in/Acads/semester_6/BET-105/lln_simulation/.snakemake/log/2026-05-14T002102.243105.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

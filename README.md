@@ -9,7 +9,7 @@ The pipeline runs this experiment `repeats` times for each k value and plots the
 
 ## Example Output
 
-![Box plot](Example_1000.png)
+![Box plot](Example_n1000_k_2000.png)
 
 
 ## Requirements
@@ -47,6 +47,7 @@ k_values:        # number of draws per experiment
   - 100
   - 200
   - 1000
+  - 2000
 ```
 
 
@@ -57,7 +58,7 @@ k_values:        # number of draws per experiment
 ├── Snakefile
 ├── config.yaml
 ├── README.md
-├── Example_1000.png
+├── Example_n1000_k_2000.png # Example plot run for k=2000
 ├── scripts/
 │   ├── lln_sim.py    # samples k values from [1..n] and saves means
 │   └── plot.py       # reads txt files and generates boxplot

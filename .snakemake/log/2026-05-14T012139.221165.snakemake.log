@@ -1,0 +1,48 @@
+Assuming unrestricted shared filesystem usage.
+host: Vansh
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count
+-----  -------
+plot         1
+all          1
+total        2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Thu May 14 01:21:39 2026]
+localrule plot:
+    input: results/1000/5.txt, results/1000/10.txt, results/1000/25.txt, results/1000/50.txt, results/1000/100.txt, results/1000/200.txt, results/1000/1000.txt
+    output: plots/1000.png
+    jobid: 1
+    reason: Missing output files: plots/1000.png
+    resources: tmpdir=/tmp
+RuleException:
+CalledProcessError in file "/mnt/c/Users/VANSH/OneDrive - iitr.ac.in/Acads/semester_6/BET-105/lln_simulation/Snakefile", line 25:
+Command 'set -euo pipefail;  python scripts/plot.py --inputfolder results/1000 --output plots/1000.png' returned non-zero exit status 1.
+[Thu May 14 01:21:40 2026]
+Error in rule plot:
+    message: None
+    jobid: 1
+    input: results/1000/5.txt, results/1000/10.txt, results/1000/25.txt, results/1000/50.txt, results/1000/100.txt, results/1000/200.txt, results/1000/1000.txt
+    output: plots/1000.png
+    shell:
+        python scripts/plot.py --inputfolder results/1000 --output plots/1000.png
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Thu May 14 01:21:40 2026]
+Error in rule plot:
+    message: None
+    jobid: 1
+    input: results/1000/5.txt, results/1000/10.txt, results/1000/25.txt, results/1000/50.txt, results/1000/100.txt, results/1000/200.txt, results/1000/1000.txt
+    output: plots/1000.png
+    shell:
+        python scripts/plot.py --inputfolder results/1000 --output plots/1000.png
+        (command exited with non-zero exit code)
+Complete log(s): /mnt/c/Users/VANSH/OneDrive - iitr.ac.in/Acads/semester_6/BET-105/lln_simulation/.snakemake/log/2026-05-14T012139.221165.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.
