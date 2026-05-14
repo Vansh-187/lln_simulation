@@ -21,5 +21,4 @@ def lln_sim():
             f.write(f"{m}\n")
 
 
-if __name__ == "__main__":
-    lln_sim()
+lln_sim()
