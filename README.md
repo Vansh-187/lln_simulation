@@ -65,5 +65,6 @@ k_values:        # number of draws per experiment
 ├── results/
 │   └── n/            # one txt file per k value 
 └── plots/
-    └── n.png         # final boxplot (will be shown once run, can be seen in the example_n.png. If I provide it in plots dir, snakemake will not run pipeline as result already exist)
+    └── n.png         # final boxplot
 ```
+> Note: the final plot goes inside `plots/` but isn't committed — if it already exists, Snakemake won't rerun. The demo PNG is just there so you can see what to expect.
